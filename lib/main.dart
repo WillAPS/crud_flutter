@@ -29,6 +29,7 @@ class FormAddTask extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(8.0),
           child: TextField(
+            style: TextStyle(fontSize: 16.0),
             decoration: InputDecoration(
               icon: Icon(Icons.task),
               labelText: "Titulo Task",
@@ -40,7 +41,7 @@ class FormAddTask extends StatelessWidget {
           padding: EdgeInsets.all(8.0),
           child: TextField(
             style: TextStyle(
-              fontSize: 24.0,
+              fontSize: 16.0,
             ),
             decoration: InputDecoration(
               icon: Icon(Icons.telegram),
