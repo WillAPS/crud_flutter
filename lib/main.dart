@@ -25,7 +25,7 @@ class FormAddTask extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Criando Task'),
       ),
-      body: Column(children: const <Widget>[
+      body: Column(children: <Widget>[
         Padding(
           padding: EdgeInsets.all(8.0),
           child: TextField(
@@ -52,8 +52,10 @@ class FormAddTask extends StatelessWidget {
         ),
         SizedBox(height: 30),
         ElevatedButton(
-          onPressed: null,
           child: Text("Add Task"),
+          onPressed: () {
+            print('click button');
+          },
         ),
       ]),
     );
