@@ -23,10 +23,12 @@ class FormAddTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Criando Transferência'),
+        title: const Text('Criando Task'),
       ),
       body: Column(children: const <Widget>[
         TextField(),
+        TextField(),
+        ElevatedButton(onPressed: null, child: Text("Add Task"))
       ]),
     );
     ;
@@ -40,7 +42,7 @@ class listTasks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Transferências'),
+        title: const Text('Tasks'),
       ),
       body: Column(children: <Widget>[
         TaskTransferencia(Task("100.0", "1000")),
