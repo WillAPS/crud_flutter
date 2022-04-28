@@ -50,10 +50,13 @@ class FormAddTask extends StatelessWidget {
             ),
           ),
         ),
-        ElevatedButton(onPressed: null, child: Text("Add Task"))
+        SizedBox(height: 30),
+        ElevatedButton(
+          onPressed: () {},
+          child: Text("Add Task"),
+        ),
       ]),
     );
-    ;
   }
 }
 
