@@ -56,7 +56,7 @@ class FormAddTask extends StatelessWidget {
           onPressed: () {
             print('click button');
           },
-          style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(60, 40))),
+          style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(100, 70))),
         ),
       ]),
     );
