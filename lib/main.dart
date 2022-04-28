@@ -23,13 +23,43 @@ class FormAddTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Criando Transferência'),
+        title: const Text('Criando Task'),
       ),
-      body: Column(children: const <Widget>[
-        TextField(),
+      body: Column(children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: TextField(
+            style: TextStyle(fontSize: 16.0),
+            decoration: InputDecoration(
+              icon: Icon(Icons.task),
+              labelText: "Titulo Task",
+              hintText: "Fazer compras",
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: TextField(
+            style: TextStyle(
+              fontSize: 16.0,
+            ),
+            decoration: InputDecoration(
+              icon: Icon(Icons.telegram),
+              labelText: "Descrição Task",
+              hintText: "Exemplo: 1Kg Batata, 1Kg Cenoura",
+            ),
+          ),
+        ),
+        SizedBox(height: 30),
+        ElevatedButton(
+          child: Text("Add Task"),
+          onPressed: () {
+            print('click button');
+          },
+          style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(120, 60))),
+        ),
       ]),
     );
-    ;
   }
 }
 
@@ -40,7 +70,7 @@ class listTasks extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Transferências'),
+        title: const Text('Tasks'),
       ),
       body: Column(children: <Widget>[
         TaskTransferencia(Task("100.0", "1000")),
