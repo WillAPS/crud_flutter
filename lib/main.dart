@@ -29,7 +29,13 @@ class FormAddTask extends StatelessWidget {
         TextField(
           decoration: InputDecoration(prefixText: "AAA", icon: Icon(Icons.task), suffixText: "Task"),
         ),
-        TextField(),
+        TextField(
+          decoration: InputDecoration(
+            icon: Icon(Icons.task_sharp),
+            labelText: "Descrição Task",
+            helperText: "Descrição Task",
+          ),
+        ),
         ElevatedButton(onPressed: null, child: Text("Add Task"))
       ]),
     );
