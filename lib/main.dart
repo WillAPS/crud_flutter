@@ -46,7 +46,7 @@ class FormAddTask extends StatelessWidget {
             decoration: InputDecoration(
               icon: Icon(Icons.telegram),
               labelText: "Descrição Task",
-              hintText: "1KG Batata, 1Kg Cenoura",
+              hintText: "Exemplo: 1Kg Batata, 1Kg Cenoura",
             ),
           ),
         ),
