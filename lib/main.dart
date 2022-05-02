@@ -1,22 +1,35 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:helloworld/screens/task/list.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:helloworld/screens/home_page.dart';
+import 'package:helloworld/screens/task/adicionar_task.dart';
+import 'package:helloworld/screens/task/listar_tasks.dart';
 import 'package:helloworld/theme_changer.dart';
 
 void main() => runApp(const TodoListApp());
 
 class TodoListApp extends StatelessWidget {
   const TodoListApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ThemeBuilder(
-      defaultBrightness: Brightness.dark,
-      defaultIcon: Icons.dark_mode,
-      builder: (context, _brightness, _icon) {
+      defaultBrightness: Brightness.light,
+      builder: (context, _brightness) {
         return MaterialApp(
-          theme: ThemeData(primarySwatch: Colors.blue, brightness: _brightness),
-          home: TasksList(),
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            brightness: _brightness,
+            textTheme: GoogleFonts.aBeeZeeTextTheme(
+              Theme.of(context).textTheme,
+            ),
+          ),
+          home: HomePage(),
+          routes: {
+            '/ListTask': (context) => TasksList(),
+            '/NewTask': (context) => AddTask(),
+          },
         );
       },
     );

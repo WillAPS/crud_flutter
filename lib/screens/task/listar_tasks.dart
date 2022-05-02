@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../models/task.dart';
 import '../../theme_changer.dart';
-import 'add.dart';
+import 'adicionar_task.dart';
 
 const _titleAppBar = Text('Tasks');
 
@@ -18,21 +18,12 @@ class TasksList extends StatefulWidget {
 }
 
 class TasksListState extends State<TasksList> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: _titleAppBar,
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                ThemeBuilder.of(context)?.changeTheme();
-                setState(() {
-                  icon: Icon(Icons.dark_mode);
-                });
-              },
-              icon: Icon(Icons.light_mode))
-        ],
       ),
       body: ListView.builder(
         itemCount: widget._tasks.length,
@@ -53,15 +44,14 @@ class TasksListState extends State<TasksList> {
   }
 
   void _att(Task? receiveTask) {
-     if (receiveTask != null &&
-        receiveTask.taskTitle != "" &&
-        receiveTask.taskSubTitle != "") {
+    if (receiveTask != null && receiveTask.taskTitle != "") {
       setState(() {
         widget._tasks.add(receiveTask);
       });
     }
   }
 }
+
 
 class TaskTransferencia extends StatelessWidget {
   final Task _task;
@@ -72,7 +62,7 @@ class TaskTransferencia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: const Icon(Icons.task),
+        leading: Icon(Icons.task_alt),
         title: Text(_task.taskTitle),
         subtitle: Text(_task.taskSubTitle),
       ),

@@ -7,11 +7,13 @@ class AddTask extends StatelessWidget {
   final TextEditingController _controllerTitleTask = TextEditingController();
   final TextEditingController _controllerSubTitleTask = TextEditingController();
 
+  AddTask({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Criando Task'),
+        title: const Text('Criando Task'),
       ),
       body: SingleChildScrollView(
         child: Column(children: <Widget>[
@@ -41,10 +43,8 @@ class AddTask extends StatelessWidget {
     final String titleTask = _controllerTitleTask.text;
     final String subTitleTask = _controllerSubTitleTask.text;
     Task(titleTask, subTitleTask);
-    if (titleTask != null && subTitleTask != null) {
-      final createdTask = Task(titleTask, subTitleTask);
-      Navigator.pop(context, createdTask);
-    }
+    final createdTask = Task(titleTask, subTitleTask);
+    Navigator.pop(context, createdTask);
   }
 }
 
