@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite:
+  path:
   google_fonts: ^2.1.0
 
 dev_dependencies:

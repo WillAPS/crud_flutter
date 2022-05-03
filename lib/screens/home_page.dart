@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloworld/screens/task/adicionar_task.dart';
+import 'package:helloworld/screens/task/listar_tasks.dart';
+import 'package:helloworld/screens/task/task_form.dart';
 
 import '../theme_changer.dart';
 
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       ),
       onPressed: () {
-        Navigator.pushNamed(context, '/ListTask');
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => TasksList()));
       },
       child: Container(
         padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
@@ -139,7 +140,7 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       ),
       onPressed: () {
-        Navigator.pushNamed(context, '/NewTask');
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => TaskForm()));
       },
       child: Container(
         padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),

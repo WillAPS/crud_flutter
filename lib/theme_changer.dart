@@ -16,7 +16,6 @@ class ThemeBuilder extends StatefulWidget {
 
 class _ThemeBuilderState extends State<ThemeBuilder> {
   late Brightness _brightness;
-  late IconData _icon;
 
   @override
   void initState() {

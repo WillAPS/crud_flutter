@@ -1,12 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:helloworld/screens/home_page.dart';
-import 'package:helloworld/screens/task/adicionar_task.dart';
-import 'package:helloworld/screens/task/listar_tasks.dart';
 import 'package:helloworld/theme_changer.dart';
 
-void main() => runApp(const TodoListApp());
+void main() {
+  runApp(const TodoListApp());
+}
 
 class TodoListApp extends StatelessWidget {
   const TodoListApp({Key? key}) : super(key: key);
@@ -26,10 +25,6 @@ class TodoListApp extends StatelessWidget {
             ),
           ),
           home: HomePage(),
-          routes: {
-            '/ListTask': (context) => TasksList(),
-            '/NewTask': (context) => AddTask(),
-          },
         );
       },
     );
